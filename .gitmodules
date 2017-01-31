@@ -1,6 +1,6 @@
 [submodule "libarray"]
 	path = libarray
-	url = git://github.com/ratouney/libarray
+	url = http://github.com/ratouney/libarray
 [submodule "header"]
 	path = header
-	url = git://github.com/ratouney/header
+	url = http://github.com/ratouney/header
