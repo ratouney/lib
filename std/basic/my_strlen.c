@@ -8,16 +8,13 @@
 ** Last update Sun Dec 11 11:45:49 2016 John Doe
 */
 
-#include "rtlib.h"
+#include "stdrat_basic.h"
 
 int	my_strlen(char *str)
 {
   int i;
 
-  i = 0;
-  while (str[i] != '\0')
-    {
-      i = i + 1;
-    }
+  i = -1;
+  while (str[++i] != '\0');
   return (i);
 }

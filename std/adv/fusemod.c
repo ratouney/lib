@@ -8,7 +8,7 @@
 ** Last update Wed Nov 30 18:19:49 2016 ratouney
 */
 
-#include <stdlib.h>
+#include "stdrat_adv.h"
 
 char *fusemod(char *src, char *add, char c, int mode)
 {

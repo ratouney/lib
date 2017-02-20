@@ -8,18 +8,26 @@
 ** Last update Wed Nov 30 18:19:49 2016 ratouney
 */
 
-int	my_strcmp(char *s1, char *s2)
+#include "stdrat_basic.h"
+
+int my_strcmp(char *s1, char *s2)
 {
-  int	count;
+  int count;
   count = 0;
+  if (s1 == NULL && s2 == NULL)
+    return (-3);
+  if (s1 == NULL || s1[0] == '\0')
+    return (-1);
+  if (s2 == NULL || s2[0] == '\0')
+    return (-2);
   while (s1[count] != '\0' && s2[count] != '\0')
-    {
-      if (s1[count] < s2[count])
-	return (2);
-      else if (s1[count] > s2[count])
-	return (1);
-      else
-	count++;
-    }
+  {
+    if (s1[count] < s2[count])
+      return (2);
+    else if (s1[count] > s2[count])
+      return (1);
+    else
+      count++;
+  }
   return (0);
 }

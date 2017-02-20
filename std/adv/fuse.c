@@ -8,7 +8,7 @@
 ** Last update Wed Nov 30 18:19:49 2016 ratouney
 */
 
-#include <stdlib.h>
+#include "stdrat_adv.h"
 
 char *fuse(char *str, char *str1, int mode)
 {
@@ -16,12 +16,12 @@ char *fuse(char *str, char *str1, int mode)
   int cunt;
   char *new;
 
-  new = malloc(sizeof(char) * (get_f(str, 0) + get_f(str1, 0) + 1));
+  new = malloc(sizeof(char) * (my_strlen(str) + my_strlen(str1) + 1));
   count = -1;
-  while (++count < get_f(str, 0))
+  while (++count < my_strlen(str))
     new[count] = str[count];
   cunt = -1;
-  while (++cunt < get_f(str1, 0))
+  while (++cunt < my_strlen(str1))
     new[count + cunt] = str1[cunt];
   new[count + cunt] = '\0';
   if (mode == 1)

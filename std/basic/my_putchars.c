@@ -8,7 +8,7 @@
 ** Last update Sun Dec 11 11:45:49 2016 John Doe
 */
 
-#include "rtlib.h"
+#include "stdrat_basic.h"
 
 void			my_putchars(char c, int max)
 {

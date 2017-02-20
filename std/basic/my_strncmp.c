@@ -8,11 +8,19 @@
 ** Last update Wed Nov 30 18:19:49 2016 ratouney
 */
 
+#include "stdrat_basic.h"
+
 int my_strncmp(char *str, char *cmp, int size)
 {
     int count;
 
     count = 0;
+    if (str == NULL && cmp == NULL)
+        return (-3);
+    if (str == NULL || str[0] == '\0')
+        return (-1);
+    if (cmp == NULL || cmp[0] == '\0')
+        return (-2);
     while (str[count] != '\0' && cmp[count] != '\0' && count < size)
     {
         if (str[count] == '\0' && cmp[count] != '\0')

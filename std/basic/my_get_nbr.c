@@ -8,6 +8,8 @@
 ** Last update Sun Dec 11 11:45:49 2016 John Doe
 */
 
+#include "stdrat_basic.h"
+
 int	my_get_nbr(char *str)
 {
   int	count;

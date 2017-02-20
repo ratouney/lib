@@ -8,7 +8,7 @@
 ** Last update Wed Nov 30 18:19:49 2016 ratouney
 */
 
-#include <stdlib.h>
+#include "stdrat_adv.h"
 
 char *stcl(char *str, int from, int to, int mode)
 {

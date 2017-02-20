@@ -8,11 +8,7 @@
 ** Last update Sun Dec 11 13:02:27 2016 John Doe
 */
 
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <stdlib.h>
-#include <unistd.h>
+#include "stdrat_adv.h"
 
 long get_size(char *filepath)
 {

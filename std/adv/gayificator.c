@@ -8,7 +8,7 @@
 ** Last update Wed Oct 19 13:17:03 2016 ratouney ratouney
 */
 
-#include <stdlib.h>
+#include "stdrat_adv.h"
 
 void	gayificator(char *str)
 {

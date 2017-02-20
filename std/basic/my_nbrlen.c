@@ -8,6 +8,8 @@
 ** Last update Thu Nov 17 07:37:23 2016 John Doe
 */
 
+#include "stdrat_basic.h"
+
 int			my_nbrlen(int a)
 {
   int count;

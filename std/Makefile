@@ -27,7 +27,9 @@ OBJ	=	$(SRC:.c=.o)
 
 NAME	=	librat.a
 
-HEADER	=	rtlib.h
+INCLUDE = -I./include
+
+CFLAGS += $(INCLUDE) -g
 
 all:	$(NAME)
 

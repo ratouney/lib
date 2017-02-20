@@ -8,14 +8,12 @@
 ** Last update Sun Dec 11 11:45:49 2016 John Doe
 */
 
-#include "rtlib.h"
+#include "stdrat_basic.h"
 
 int	rec_my_put_nbr(int nb)
 {
   if (nb <= 9)
-    {
       my_putchar('0' + nb);
-    }
   else
     {
       my_put_nbr(nb / 10);
@@ -23,7 +21,7 @@ int	rec_my_put_nbr(int nb)
     }
 }
 
-int	my_put_nbr(int nb)
+void	my_put_nbr(int nb)
 {
   if (nb < 0)
     {
