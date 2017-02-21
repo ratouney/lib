@@ -10,11 +10,11 @@
 
 #include "stdrat_adv.h"
 
-void	gayificator(char *str)
+void gayificator(char *str)
 {
-  int	i;
-  int	incre_rb;
-  char	**char_color;
+  int i;
+  int incre_rb;
+  char **char_color;
 
   i = -1;
   incre_rb = 0;
@@ -29,12 +29,12 @@ void	gayificator(char *str)
   char_color[5] = "\x1B[36m";
   i = -1;
   while (str[++i] != '\0')
-    {
-      my_putstr(char_color[incre_rb]);
-      my_putchar(str[i]);
-      incre_rb = incre_rb + 1;
-      if (incre_rb == 7)
-	incre_rb = 0;
-    }
+  {
+    my_putstr(char_color[incre_rb]);
+    my_putchar(str[i]);
+    incre_rb = incre_rb + 1;
+    if (incre_rb == 7)
+      incre_rb = 0;
+  }
   my_putstr("\x1B[0m");
 }

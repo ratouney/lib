@@ -5,7 +5,7 @@
 ## Login   <ratouney@epitech.net>
 ## 
 ## Started on  Fri Oct 14 09:36:54 2016 ratouney ratouney
-## Last update Mon Oct 17 11:11:10 2016 ratouney ratouney
+## Last update Mon Feb 20 15:40:37 2017 ratouney
 ##
 
 SRC	=	adv/fuse.c				\
@@ -29,7 +29,7 @@ NAME	=	librat.a
 
 INCLUDE = -I./include
 
-CFLAGS += $(INCLUDE) -g
+CFLAGS += $(INCLUDE) -g -W -Wall -Wextra
 
 all:	$(NAME)
 
