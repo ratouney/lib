@@ -15,7 +15,11 @@ SRC	=	string/my_putchar.c		\
 		string/my_strncmp.c		\
 		string/my_strlen.c		\
 		string/my_getnbr.c		\
-		string/fdinstr.c
+		string/fdinstr.c		\
+		string/fuse.c 			\
+		string/stcl.c			\
+		string/my_nbrtostring.c	\
+		string/my_chartostring.c
 
 OBJ	=	$(SRC:.c=.o)
 
