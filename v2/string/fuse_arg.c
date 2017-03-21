@@ -88,7 +88,7 @@ int my_nbrlen(int nbr)
     return (count);
 }
 
-char *my_nbrtostring(int nbr)
+char *nbtost(int nbr)
 {
     int total;
     int count;
@@ -111,7 +111,7 @@ char *my_nbrtostring(int nbr)
     return (new);
 }
 
-char *my_chartostring(char c)
+char *chtost(char c)
 {
     char *temp;
 
@@ -125,37 +125,25 @@ char *my_chartostring(char c)
 char *fuse_arg(char *str, ...)
 {
     va_list list;
-    int count;
-    char *buffer;
+    int i;
+    char *buf;
     char *rt;
     void *prev;
 
-    count = 0;
+    i = -1;
     prev = NULL;
     rt = NULL;
     va_start(list, str);
-    while (str[count] != '\0')
+    while (str[++i] != '\0')
     {
-        if (str[count] == 's')
-        {
-            prev = va_arg(list, char *);
+        if (str[i] == 's' && (prev = va_arg(list, char *)))
             rt = (rt == NULL ? stcl(prev, 0, 0, 0) : fuse(rt, prev, 1));
-        }
-        if (str[count] == 'c')
-        {
-            prev = va_arg(list, int);
-            buffer = my_chartostring(prev);
-            rt = (rt == NULL ? stcl(buffer, 0, 0, 0) : fuse(rt, buffer, 3));
-        }
-        if (str[count] == 'd')
-        {
-            prev = va_arg(list, int);
-            buffer = my_nbrtostring(prev);
-            rt = (rt == NULL ? stcl(buffer, 0, 0, 0) : fuse(rt, buffer, 3));
-        }
-        if (str[count] == ':' && prev != NULL)
+        else if (str[i] == 'c' && (buf = chtost(prev = va_arg(list, int))))
+            rt = (rt == NULL ? stcl(buf, 0, 0, 0) : fuse(rt, buf, 3));
+        else if (str[i] == 'd' && (buf = nbtost(prev = va_arg(list, int))))
+            rt = (rt == NULL ? stcl(buf, 0, 0, 0) : fuse(rt, buf, 3));
+        else if (str[i] == ':' && prev != NULL)
             free(prev);
-        count++;
     }
     va_end(list);
     return (rt);
@@ -173,6 +161,6 @@ int main(int argc, char **argv)
     yolo[3] = ' ';
     yolo[4] = '\0';
     temp = fuse_arg("sss:dcs", "J'aime", "", yolo, 42, '/', "sh");
-    printf("Temp : [%s]", temp);
+    printf("Temp : [%s]\n", temp);
     free(temp);
 }
