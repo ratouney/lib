@@ -1,0 +1,40 @@
+##
+## Makefile for dmfkgjldfkgjf in /home/ratouney/CPool_Day10
+## 
+## Made by ratouney ratouney
+## Login   <ratouney@epitech.net>
+## 
+## Started on  Fri Oct 14 09:36:54 2016 ratouney ratouney
+## Last update Mon Mar 20 17:08:19 2017 
+##
+
+SRC	=	string/my_putchar.c		\
+		string/my_putstr.c		\
+		string/my_putnbr.c		\
+		string/my_strcmp.c		\
+		string/my_strncmp.c		\
+		string/my_strlen.c		\
+		string/my_getnbr.c		\
+		string/fdinstr.c
+
+OBJ	=	$(SRC:.c=.o)
+
+NAME	=	librat.a
+
+INCLUDE = -I./include
+
+CFLAGS += $(INCLUDE) -g -W -Wall -Wextra -Werror
+
+all:	$(NAME)
+
+$(NAME):	$(OBJ)
+	@ar rc $(NAME) $(OBJ)
+	@make clean
+
+clean:
+	@rm -f $(OBJ)
+
+fclean:	clean
+	@rm -f $(NAME)
+
+re:	fclean all
