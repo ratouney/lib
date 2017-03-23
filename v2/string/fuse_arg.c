@@ -9,6 +9,8 @@
 */
 
 #include <stdarg.h>
+#include <unistd.h>
+#include <stdlib.h>
 #include "ratlib.h"
 
 char *fuse_arg(char *str, ...)

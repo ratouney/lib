@@ -31,8 +31,8 @@ int	fdinstr(char tofind, char *str);
 char *stcl(char *str, int from, int to, int mode);
 int my_nbrlen(int nbr);
 char *my_chartostring(char c);
-char *chtost(char c);
 char *my_nbrtostring(int nbr);
-char *nbtost(int nbr);
+char *fuse_arg(char *str, ...);
+char *fuse(char *str, char *add, int mode);
 
 #endif /* !RATLIB_H_ */
