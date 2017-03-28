@@ -5,7 +5,7 @@
 ## Login   <ratouney@epitech.net>
 ## 
 ## Started on  Fri Oct 14 09:36:54 2016 ratouney ratouney
-## Last update Thu Mar 23 13:06:18 2017 
+## Last update Tue Mar 28 19:06:36 2017 
 ##
 
 SRC	=	string/my_putchar.c		\
@@ -46,17 +46,17 @@ CFLAGS += $(INCLUDE) -g
 all:	$(NAME)
 
 $(NAME):	$(OBJ)
-	@ar rc $(NAME) $(OBJ)
-	@make clean
+	ar rc $(NAME) $(OBJ)
+	make clean
 
 full:		$(FULLOB)
-	@ar rc $(NAME) $(OBJ)
-	@rm -f $(FULLOB)
+	ar rc $(NAME) $(OBJ)
+	rm -f $(FULLOB)
 
 clean:
-	@rm -f $(OBJ)
+	rm -f $(OBJ) $(FULLOBJ)
 
 fclean:	clean
-	@rm -f $(NAME)
+	rm -f $(NAME)
 
 re:	fclean all

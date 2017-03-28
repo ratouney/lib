@@ -5,7 +5,7 @@
 ** Login   <maxime.de-la-fouchardiere@epitech.eu>
 ** 
 ** Started on  Mon Mar 20 16:28:20 2017 
-** Last update Mon Mar 20 17:08:34 2017 
+** Last update Tue Mar 28 18:53:23 2017 
 */
 
 #ifndef RATLIB_H_
@@ -31,7 +31,9 @@ int	fdinstr(char tofind, char *str);
 char *stcl(char *str, int from, int to, int mode);
 int my_nbrlen(int nbr);
 char *my_chartostring(char c);
+char *chtost(char c);
 char *my_nbrtostring(int nbr);
+char *nbtoch(int nbr);
 char *fuse_arg(char *str, ...);
 char *fuse(char *str, char *add, int mode);
 

@@ -5,7 +5,7 @@
 ** Login   <ratouney@epitech.net>
 **
 ** Started on  Sun Dec 11 09:59:08 2016 ratouney
-** Last update Mon Mar 20 16:45:38 2017 
+** Last update Tue Mar 28 19:01:53 2017 
 */
 
 #include "ratlib.h"
@@ -13,7 +13,7 @@
 void	my_rec_putnbr(int nb)
 {
   if (nb <= 9)
-      my_putchar('0' + nb);
+    my_putchar('0' + nb);
   else
     {
       my_rec_putnbr(nb / 10);
