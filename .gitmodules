@@ -7,3 +7,6 @@
 [submodule "header"]
 	path = header
 	url = http://github.com/ratouney/header
+[submodule "gnl"]
+	path = gnl
+	url = http://github.com/ratouney/gnl
