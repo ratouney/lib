@@ -48,5 +48,6 @@ t_charray      *calib_import(char **data, int given);
 char		**calib_export(t_charray *data, int mode);
 t_charray      *calib_fromstr(char *str, char sep);
 int		calib_strlen(char *str);
+t_charray *calib_select(t_charray *data, int from, int to, int mode);
 
 #endif  /* !CALIB_H_ */
