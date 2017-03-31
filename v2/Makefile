@@ -5,7 +5,7 @@
 ## Login   <ratouney@epitech.net>
 ## 
 ## Started on  Fri Oct 14 09:36:54 2016 ratouney ratouney
-## Last update Fri Mar 31 13:04:55 2017 
+## Last update Fri Mar 31 15:25:44 2017 
 ##
 
 SRC	=	string/my_putchar.c		\
@@ -33,7 +33,10 @@ SRC	=	string/my_putchar.c		\
 		libarray/fillgen.c		\
 		libarray/my_strpaste.c		\
 		libarray/newcharray.c		\
-		gnl/get_next_line.c
+		gnl/get_next_line.c		\
+		misc/char_is.c			\
+		misc/power_it.c			\
+		misc/str_is.c
 
 FULL	=	$(SRC)				\
 		string/fuse_arg.c

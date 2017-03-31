@@ -5,7 +5,7 @@
 ** Login   <maxime.de-la-fouchardiere@epitech.eu>
 ** 
 ** Started on  Mon Mar 20 16:28:20 2017 
-** Last update Fri Mar 31 09:58:39 2017 
+** Last update Fri Mar 31 15:26:30 2017 
 */
 
 #ifndef RATLIB_H_
@@ -36,5 +36,13 @@ char	*my_nbrtostring(int nbr);
 char	*nbtoch(int nbr);
 char	*fuse_arg(char *str, ...);
 char	*fuse(char *str, char *add, int mode);
+
+int	power_int(int number, int power);
+float	power_float(float number, float power);
+int	char_isnum(char c);
+int	char_islow(char c);
+int	char_isupp(char c);
+int	char_isalpha(char c);
+int	char_isalphanum(char c);
 
 #endif /* !RATLIB_H_ */
