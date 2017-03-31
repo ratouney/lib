@@ -1,11 +1,11 @@
 /*
-** fuse_arg.c for fuse_arg in /home/ratouney/lib/v2/string
+** fuse.c for fuse in /home/ratouney/lib/v2
 ** 
 ** Made by 
-** Login   <maxime.de-la-fouchardiere@epitech.eu>
+** Login   <ratouney>
 ** 
-** Started on  Mon Mar 20 17:09:29 2017 
-** Last update Tue Mar 28 19:00:00 2017 
+** Started on  Fri Mar 31 13:03:06 2017 
+** Last update Fri Mar 31 13:03:08 2017 
 */
 
 #include <stdlib.h>

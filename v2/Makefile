@@ -5,7 +5,7 @@
 ## Login   <ratouney@epitech.net>
 ## 
 ## Started on  Fri Oct 14 09:36:54 2016 ratouney ratouney
-## Last update Tue Mar 28 19:06:36 2017 
+## Last update Fri Mar 31 13:04:55 2017 
 ##
 
 SRC	=	string/my_putchar.c		\
@@ -17,20 +17,25 @@ SRC	=	string/my_putchar.c		\
 		string/my_getnbr.c		\
 		string/fdinstr.c		\
 		string/fuse.c 			\
-		string/stcl.c
-
-FULL	=	string/my_putchar.c		\
-		string/my_putstr.c		\
-		string/my_putnbr.c		\
-		string/my_strcmp.c		\
-		string/my_strncmp.c		\
-		string/my_strlen.c		\
-		string/my_getnbr.c		\
-		string/fdinstr.c		\
-		string/fuse.c 			\
 		string/stcl.c			\
-		string/my_nbrtostring.c	\
-		string/my_chartostring.c\
+		libarray/calib_add.c		\
+		libarray/calib_char.c		\
+		libarray/calib_copy.c		\
+		libarray/calib_export.c		\
+		libarray/calib_fromstr.c	\
+		libarray/calib_import.c		\
+		libarray/calib_nbr.c		\
+		libarray/calib_rem.c		\
+		libarray/calib_show.c		\
+		libarray/calib_write.c		\
+		libarray/charray.c		\
+		libarray/destroy_charray.c	\
+		libarray/fillgen.c		\
+		libarray/my_strpaste.c		\
+		libarray/newcharray.c		\
+		gnl/get_next_line.c
+
+FULL	=	$(SRC)				\
 		string/fuse_arg.c
 
 OBJ	=	$(SRC:.c=.o)
@@ -41,7 +46,7 @@ NAME	=	librat.a
 
 INCLUDE = -I./include
 
-CFLAGS += $(INCLUDE) -g
+CFLAGS += $(INCLUDE) -g -W -Wall -Wextra
 
 all:	$(NAME)
 

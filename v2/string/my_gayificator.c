@@ -5,7 +5,7 @@
 ** Login   <ratouney>
 ** 
 ** Started on  Fri Mar 31 10:13:50 2017 
-** Last update Fri Mar 31 11:38:53 2017 
+** Last update Fri Mar 31 12:54:37 2017 
 */
 
 #include <unistd.h>
@@ -15,17 +15,9 @@ void	my_gayificator_rand()
 {
   char c;
   int ran;
-  int prev;
 
   write(1, "\e[3", 3);
   ran = rand() % 10;
-  c = (ran) + '0';
-  write(1, &c, 1);
-  write(1, "m", 1);
-
-  prev = ran;
-  while ((ran = rand() % 10) == prev);
-  write(1, "\e[4", 3);
   c = (ran) + '0';
   write(1, &c, 1);
   write(1, "m", 1);
