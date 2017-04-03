@@ -17,7 +17,7 @@ int	my_putchar(char c);
 int	my_putchar_fd(int fd, char c);
 
 int	my_putstr(char *str);
-int	my_pustr_fd(int fd, char *str);
+int	my_putstr_fd(int fd, char *str);
 
 void	my_putnbr(int nbr);
 void	my_putnbr_fd(int fd, int nbr);
