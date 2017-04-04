@@ -97,8 +97,6 @@ t_content	loadfile(char *path)
 {
   t_content	data;
 
-  /*if ((data = malloc(sizeof(t_content))) == NULL)
-    return (NULL);*/
   data.errno = 0;
   if ((data.fd = open(path, O_RDONLY)) < 0)
     {
