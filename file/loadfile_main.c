@@ -49,27 +49,27 @@ int	loadfile_sep(char *str, char c)
   return (total);
 }
 
-t_content	*loadfile_line_prep(t_content *info)
+t_content	loadfile_line_prep(t_content info)
 {
   char		**data;
   int		seps;
 
-  if ((seps = loadfile_sep(info->raw, '\n')) == 0)
+  if ((seps = loadfile_sep(info.raw, '\n')) == 0)
     {
-      info->errno = 3;
+      info.errno = 3;
       return (info);
     }
   if ((data = malloc(sizeof(char *) * (seps + 2))) == NULL)
     {
-      info->errno = 4;
+      info.errno = 4;
       return (info);
     }
-  info->line = data;
-  info->errno_mod = seps;
+  info.line = data;
+  info.errno_mod = seps;
   return (info);
 }
 
-t_content	*loadfile_line(t_content *info)
+t_content	loadfile_line(t_content info)
 {
   int		count;
   int		start;
@@ -78,39 +78,39 @@ t_content	*loadfile_line(t_content *info)
   info = loadfile_line_prep(info);
   count = 0;
   cunt = 0;
-  while (info->raw[count])
+  while (info.raw[count])
     {
       start = count;
-      while (info->raw[count] && info->raw[count] != '\n')
+      while (info.raw[count] && info.raw[count] != '\n')
 	count++;
-      if ((info->line[cunt] = stcl(info->raw, start, count, 0)) == NULL)
-	info->line[cunt] = stcl("\0", 0, 0, 0);
+      if ((info.line[cunt] = stcl(info.raw, start, count, 0)) == NULL)
+	info.line[cunt] = stcl("\0", 0, 0, 0);
       cunt++;
-      if (info->raw[count])
+      if (info.raw[count])
 	count++;
     }
-  info->line[cunt] = NULL;
+  info.line[cunt] = NULL;
   return (info);
 }
 
-t_content	*loadfile(char *path)
+t_content	loadfile(char *path)
 {
-  t_content	*data;
+  t_content	data;
 
-  if ((data = malloc(sizeof(t_content))) == NULL)
-    return (NULL);
-  data->errno = 0;
-  if ((data->fd = open(path, O_RDONLY)) < 0)
+  /*if ((data = malloc(sizeof(t_content))) == NULL)
+    return (NULL);*/
+  data.errno = 0;
+  if ((data.fd = open(path, O_RDONLY)) < 0)
     {
-      data->errno = 1;
+      data.errno = 1;
       return (data);
     }
-  if ((data->raw = loadfile_raw(data->fd)) == NULL)
+  if ((data.raw = loadfile_raw(data.fd)) == NULL)
     {
-      data->errno = 2;
+      data.errno = 2;
       return (data);
     }
-  data->size = my_strlen(data->raw);
+  data.size = my_strlen(data.raw);
   data = loadfile_line(data);
   return (data);
 }

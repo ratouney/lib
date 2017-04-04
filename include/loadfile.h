@@ -22,13 +22,13 @@ typedef struct s_content
     int		size;
 }		t_content;
 
-void		loadfile_destroy(t_content *data);
-void		loadfile_show(t_content *data);
-void		loadfile_showerr(t_content *data);
+void		loadfile_destroy(t_content data);
+void		loadfile_show(t_content data);
+void		loadfile_showerr(t_content data);
 int		loadfile_sep(char *str, char c);
-t_content       *loadfile_line_prep(t_content *info);
-t_content	*loadfile_line(t_content *info);
-t_content       *loadfile(char *path);
+t_content       loadfile_line_prep(t_content info);
+t_content	loadfile_line(t_content info);
+t_content       loadfile(char *path);
 char		*loadfile_raw(int fd);
 
 # define LF_LOD(x) loadfile(x);
