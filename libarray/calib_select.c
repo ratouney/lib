@@ -1,11 +1,11 @@
 /*
 ** calib_select.c for calib in /home/ratouney/lib/libarray
-** 
-** Made by 
+**
+** Made by
 ** Login   <ratouney>
-** 
-** Started on  Fri Mar 31 17:10:08 2017 
-** Last update Mon Apr  3 20:19:09 2017 
+**
+** Started on  Fri Mar 31 17:10:08 2017
+** Last update	Wed Apr 05 10:51:46 2017 Full Name
 */
 
 #include <stdlib.h>

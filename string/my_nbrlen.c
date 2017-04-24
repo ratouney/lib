@@ -1,11 +1,11 @@
 /*
-** fuse_arg.c for fuse_arg in /home/ratouney/lib/v2/string
+** my_nbrlen.c for my_nbrlen in /home/arthur/delivery/CPE/CPE_2016_Lemin/ratlib/string
 ** 
-** Made by 
-** Login   <maxime.de-la-fouchardiere@epitech.eu>
+** Made by Arthur Knoepflin
+** Login   <arthur@epitech.net>
 ** 
-** Started on  Mon Mar 20 17:09:29 2017 
-** Last update Tue Mar 28 19:00:40 2017 
+** Started on  Mon Apr 10 22:08:13 2017 Arthur Knoepflin
+** Last update Mon Apr 10 22:09:27 2017 Arthur Knoepflin
 */
 
 #include "ratlib.h"

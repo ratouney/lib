@@ -5,7 +5,7 @@
 ** Login   <ratouney@epitech.net>
 **
 ** Started on  Thu Oct  6 13:49:57 2016 ratouney ratouney
-** Last update Fri Mar 31 10:03:32 2017 
+** Last update	Wed Apr 05 10:51:33 2017 Full Name
 */
 
 #include <stdio.h>
@@ -23,8 +23,7 @@ t_charray	*calib_import(char **data, int given)
   else
     {
       i = -1;
-      while (data[++i] != NULL)
-	;
+      while (data[++i] != NULL);
       size = i;
     }
   if ((new = malloc(sizeof(t_charray))) == NULL)

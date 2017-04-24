@@ -1,11 +1,11 @@
 /*
 ** str_is.c for lib in /home/ratouney/lib/v2/misc
-** 
-** Made by 
+**
+** Made by
 ** Login   <ratouney>
-** 
-** Started on  Fri Mar 31 15:20:32 2017 
-** Last update Fri Mar 31 15:25:16 2017 
+**
+** Started on  Fri Mar 31 15:20:32 2017
+** Last update	Wed Apr 05 10:52:28 2017 Full Name
 */
 
 #include <unistd.h>
@@ -13,7 +13,7 @@
 
 int	str_islow(char *str)
 {
-  int count;
+  int	count;
 
   if (str == NULL)
     return (0);
@@ -29,7 +29,7 @@ int	str_islow(char *str)
 
 int	str_isupp(char *str)
 {
-  int count;
+  int	count;
 
   if (str == NULL)
     return (0);
@@ -45,7 +45,7 @@ int	str_isupp(char *str)
 
 int	str_isnum(char *str)
 {
-  int count;
+  int	count;
 
   if (str == NULL)
     return (0);
@@ -61,7 +61,7 @@ int	str_isnum(char *str)
 
 int	str_isalpha(char *str)
 {
-  int count;
+  int	count;
 
   if (str == NULL)
     return (0);
@@ -77,7 +77,7 @@ int	str_isalpha(char *str)
 
 int	str_isalphanum(char *str)
 {
-  int count;
+  int	count;
 
   if (str == NULL)
     return (0);

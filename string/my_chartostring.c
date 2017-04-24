@@ -1,11 +1,11 @@
 /*
-** fuse_arg.c for fuse_arg in /home/ratouney/lib/v2/string
+** my_chartostring.c for my_chartostring in /home/arthur/delivery/CPE/CPE_2016_Lemin/ratlib/string
 ** 
-** Made by 
-** Login   <maxime.de-la-fouchardiere@epitech.eu>
+** Made by Arthur Knoepflin
+** Login   <arthur@epitech.net>
 ** 
-** Started on  Mon Mar 20 17:09:29 2017 
-** Last update Tue Mar 28 19:00:24 2017 
+** Started on  Mon Apr 10 21:53:22 2017 Arthur Knoepflin
+** Last update Mon Apr 10 21:55:08 2017 Arthur Knoepflin
 */
 
 #include <stdlib.h>

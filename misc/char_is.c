@@ -1,11 +1,11 @@
 /*
 ** str_is.c for lib in /home/ratouney/lib/v2/misc
-** 
-** Made by 
+**
+** Made by
 ** Login   <ratouney>
-** 
-** Started on  Fri Mar 31 15:13:20 2017 
-** Last update Fri Mar 31 15:20:16 2017 
+**
+** Started on  Fri Mar 31 15:13:20 2017
+** Last update	Wed Apr 05 10:52:21 2017 Full Name
 */
 
 int	char_isnum(char c)

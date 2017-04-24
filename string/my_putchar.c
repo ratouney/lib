@@ -1,11 +1,11 @@
 /*
 ** my_putchar.c for my_putchar in /home/ratouney/lib/v2/string
-** 
-** Made by 
+**
+** Made by
 ** Login   <maxime.de-la-fouchardiere@epitech.eu>
-** 
-** Started on  Mon Mar 20 16:18:08 2017 
-** Last update Mon Mar 20 16:27:28 2017 
+**
+** Started on  Mon Mar 20 16:18:08 2017
+** Last update	Wed Apr 05 10:53:19 2017 Full Name
 */
 
 #include <unistd.h>

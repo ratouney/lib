@@ -5,7 +5,7 @@
 ** Login   <ratouney@epitech.net>
 **
 ** Started on  Thu Oct  6 13:49:57 2016 ratouney ratouney
-** Last update Thu Mar 30 18:06:19 2017 
+** Last update	Tue Apr 18 15:20:31 2017 Full Name
 */
 
 #ifndef CALIB_H_
@@ -25,28 +25,28 @@
 # define LA_IMP(x, y) calib_import(x, y)
 # define LA_EXP(x, y) calib_export(x, y)
 
-typedef struct s_charray
+typedef struct	s_charray
 {
-  char **data;
-  char *fill;
-  int size;
+  char		**data;
+  char		*fill;
+  int		size;
 }		t_charray;
 
 void		calib_char(char c);
 void		calib_nbr(int a);
-char		*stp(char *,int);
+char		*stp(char *, int);
 char		*fillgen(int size);
 char		**charray(int size);
 t_charray	*newcharray(int size);
 void		destroy_charray(t_charray *data);
 void		calib_write(t_charray *array, char *str, int spot, int mode);
 void		calib_show(t_charray *data);
-t_charray      *calib_add(t_charray *data, char *str, int pos, int mode);
-t_charray      *calib_rem(t_charray *data, int pos, int mode);
-t_charray      *calib_copy(t_charray *data);
-t_charray      *calib_import(char **data, int given);
+t_charray	*calib_add(t_charray *data, char *str, int pos, int mode);
+t_charray	*calib_rem(t_charray *data, int pos, int mode);
+t_charray	*calib_copy(t_charray *data);
+t_charray	*calib_import(char **data, int given);
 char		**calib_export(t_charray *data, int mode);
-t_charray      *calib_fromstr(char *str, char sep);
+t_charray	*calib_fromstr(char *str, char sep);
 int		calib_strlen(char *str);
 
 #endif  /* !CALIB_H_ */

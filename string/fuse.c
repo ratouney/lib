@@ -1,11 +1,11 @@
 /*
-** fuse.c for lib in /home/ratouney/lib
+** fuse.c for fuse in /home/arthur/delivery/CPE/CPE_2016_Lemin/ratlib/string
 ** 
-** Made by 
-** Login   <ratouney>
+** Made by Arthur Knoepflin
+** Login   <arthur@epitech.net>
 ** 
-** Started on  Fri Mar 31 15:58:08 2017 
-** Last update Fri Mar 31 15:58:10 2017 
+** Started on  Mon Apr 10 21:46:45 2017 Arthur Knoepflin
+** Last update Mon Apr 10 22:32:21 2017 Arthur Knoepflin
 */
 
 #include <stdlib.h>

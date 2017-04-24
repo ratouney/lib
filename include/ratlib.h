@@ -1,17 +1,23 @@
 /*
 ** ratlib.h for ratlib.h in /home/ratouney/lib/v2/include
-** 
-** Made by 
+**
+** Made by
 ** Login   <maxime.de-la-fouchardiere@epitech.eu>
-** 
-** Started on  Mon Mar 20 16:28:20 2017 
-** Last update Fri Mar 31 15:26:30 2017 
+**
+** Started on  Mon Mar 20 16:28:20 2017
+** Last update	Wed Apr 05 10:50:37 2017 Full Name
 */
 
 #ifndef RATLIB_H_
 # define RATLIB_H_
 
+# ifndef UNUSED_MAC
+#  define UNUSED_MAC
+#  define UNUSED(x) ((void)x)
+# endif /* !UNUSED_MAC */
+
 int	my_strlen(char *str);
+int	my_epurstrlen(char *);
 
 int	my_putchar(char c);
 int	my_putchar_fd(int fd, char c);
@@ -44,5 +50,10 @@ int	char_islow(char c);
 int	char_isupp(char c);
 int	char_isalpha(char c);
 int	char_isalphanum(char c);
+
+void	show_tab(char **tab, int fd);
+void	show_array(int *tab, int size, int fd);
+void	free_tab(char **tab);
+int	nb_args(char **);
 
 #endif /* !RATLIB_H_ */

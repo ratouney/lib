@@ -1,11 +1,11 @@
 /*
 ** my_gayificator.c for lib in /home/ratouney/lib/v2/string
-** 
-** Made by 
+**
+** Made by
 ** Login   <ratouney>
-** 
-** Started on  Fri Mar 31 10:13:50 2017 
-** Last update Fri Mar 31 12:54:37 2017 
+**
+** Started on  Fri Mar 31 10:13:50 2017
+** Last update	Wed Apr 05 10:53:00 2017 Full Name
 */
 
 #include <unistd.h>
@@ -13,8 +13,8 @@
 
 void	my_gayificator_rand()
 {
-  char c;
-  int ran;
+  char	c;
+  int	ran;
 
   write(1, "\e[3", 3);
   ran = rand() % 10;
@@ -25,7 +25,7 @@ void	my_gayificator_rand()
 
 void	my_gayificator(char *str)
 {
-  int count;
+  int	count;
 
   count = 0;
   srand(getpid());

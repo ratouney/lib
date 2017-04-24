@@ -5,7 +5,7 @@
 ** Login   <ratouney@epitech.net>
 **
 ** Started on  Sun Dec 11 09:59:08 2016 ratouney
-** Last update Tue Mar 28 19:01:53 2017 
+** Last update	Wed Apr 05 10:53:24 2017 Full Name
 */
 
 #include "ratlib.h"
@@ -30,7 +30,6 @@ void	my_putnbr(int nb)
     }
   my_rec_putnbr(nb);
 }
-
 
 void	my_rec_putnbr_fd(int fd, int nb)
 {

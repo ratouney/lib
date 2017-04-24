@@ -1,11 +1,11 @@
 /*
 ** main.c for GetNextLine in /home/ratouney/gnl
-** 
+**
 ** Made by Ratouney
 ** Login   <maxime.de-la-fouchardiere@epitech.eu>
-** 
-** Started on  Tue Mar 28 13:46:20 2017 
-** Last update Fri Mar 31 13:05:16 2017 
+**
+** Started on  Tue Mar 28 13:46:20 2017
+** Last update	Wed Apr 05 10:49:25 2017 Full Name
 */
 
 #include <unistd.h>
@@ -30,17 +30,18 @@ char	*gnl_fuse(char *str, char *str1, int mode)
 {
   int	count;
   int	cunt;
-  char	*new;
+  char	*n;
 
-  if ((new = malloc(sizeof(char) * (gnl_stl(str) + gnl_stl(str1) + 1))) == NULL)
+  if ((n = malloc(sizeof(char) *
+		  (gnl_stl(str) + gnl_stl(str1) + 1))) == NULL)
     return (NULL);
   count = -1;
   while (++count < gnl_stl(str))
-    new[count] = str[count];
+    n[count] = str[count];
   cunt = -1;
   while (++cunt < gnl_stl(str1))
-    new[count + cunt] = str1[cunt];
-  new[count + cunt] = '\0';
+    n[count + cunt] = str1[cunt];
+  n[count + cunt] = '\0';
   if (mode == 1)
     free(str);
   else if (mode == 2)
@@ -50,7 +51,7 @@ char	*gnl_fuse(char *str, char *str1, int mode)
       free(str);
       free(str1);
     }
-  return (new);
+  return (n);
 }
 
 int	gnl_fdinstr(char tofind, char *str)
@@ -74,7 +75,7 @@ char	*gnl_stcl(char *str, int from, int to, int mode)
   int	count;
   int	min;
   int	max;
-  char	*new;
+  char	*n;
 
   if (to <= from && to != 0)
     return (NULL);
@@ -83,15 +84,15 @@ char	*gnl_stcl(char *str, int from, int to, int mode)
     max = gnl_stl(str);
   else
     max = (to <= gnl_stl(str) ? to : gnl_stl(str));
-  if ((new = malloc(sizeof(char) * (max - min + 2))) == NULL)
+  if ((n = malloc(sizeof(char) * (max - min + 2))) == NULL)
     return (NULL);
   count = -1;
   while (++count + min < max)
-    new[count] = str[count + min];
-  new[count] = '\0';
+    n[count] = str[count + min];
+  n[count] = '\0';
   if (mode == 1)
     free(str);
-  return (new);
+  return (n);
 }
 
 char		*get_next_line(int fd)

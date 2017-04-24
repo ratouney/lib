@@ -1,11 +1,11 @@
 /*
 ** loadfile_utils.c for LoadFile in /home/ratouney/lib
-** 
-** Made by 
+**
+** Made by
 ** Login   <ratouney>
-** 
-** Started on  Mon Apr  3 19:55:49 2017 
-** Last update Mon Apr  3 20:18:28 2017 
+**
+** Started on  Mon Apr  3 19:55:49 2017
+** Last update	Wed Apr 05 10:48:47 2017 Full Name
 */
 
 #include <stdlib.h>
@@ -13,7 +13,7 @@
 #include "loadfile.h"
 #include "ratlib.h"
 
-void	 loadfile_destroy(t_content data)
+void	loadfile_destroy(t_content data)
 {
   int	count;
 
@@ -72,4 +72,20 @@ void	loadfile_showerr(t_content data)
       write(2, "[ERRNO == 4]", 12);
       write(2, "Memory allocation for the array failed\n", 39);
     }
+}
+
+char	**loadfile_export(t_content data)
+{
+  char	**new;
+  int	count;
+
+  count = -1;
+  while (data.line[++count]);
+  if ((new = malloc(sizeof(char *) * (count + 1))) == NULL)
+    return (NULL);
+  new[count] = NULL;
+  count = -1;
+  while (data.line[++count])
+    new[count] = stcl(data.line[count], 0, 0, 0);
+  return (new);
 }

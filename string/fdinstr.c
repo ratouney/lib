@@ -1,11 +1,11 @@
 /*
 ** fdinstr.c for fdinstr.c in /home/ratouney/lib/v2/string
-** 
-** Made by 
+**
+** Made by
 ** Login   <maxime.de-la-fouchardiere@epitech.eu>
-** 
-** Started on  Mon Mar 20 17:05:08 2017 
-** Last update Tue Mar 28 18:58:54 2017 
+**
+** Started on  Mon Mar 20 17:05:08 2017
+** Last update	Wed Apr 05 10:52:33 2017 Full Name
 */
 
 #include <unistd.h>

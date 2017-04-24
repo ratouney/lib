@@ -1,11 +1,11 @@
 ##
 ## Makefile for dmfkgjldfkgjf in /home/ratouney/CPool_Day10
-## 
+##
 ## Made by ratouney ratouney
 ## Login   <ratouney@epitech.net>
-## 
+##
 ## Started on  Fri Oct 14 09:36:54 2016 ratouney ratouney
-## Last update Mon Apr  3 20:50:29 2017 
+## Last update Wed Apr 12 13:23:03 2017 Arthur Knoepflin
 ##
 
 SRC	=	string/my_putchar.c		\
@@ -14,6 +14,7 @@ SRC	=	string/my_putchar.c		\
 		string/my_strcmp.c		\
 		string/my_strncmp.c		\
 		string/my_strlen.c		\
+		string/my_epurstrlen.c		\
 		string/my_getnbr.c		\
 		string/fdinstr.c		\
 		string/fuse.c 			\
@@ -40,7 +41,9 @@ SRC	=	string/my_putchar.c		\
 		misc/str_is.c			\
 		file/loadfile_main.c		\
 		file/loadfile_utils.c		\
-		array/show_tab.c
+		array/show_tab.c		\
+		array/free_tab.c		\
+		array/nb_args.c
 
 FULL	=	$(SRC)				\
 		string/fuse_arg.c
@@ -51,24 +54,24 @@ FULLOB	=	$(FULL:.c=.o)
 
 NAME	=	librat.a
 
-INCLUDE = -I./include
+INCLUDE	= 	-I./include
 
-CFLAGS += $(INCLUDE) -g -W -Wall -Wextra
+CFLAGS	+=	$(INCLUDE) -W -Wall -Wextra
 
-all:	$(NAME)
+all:		$(NAME)
 
 $(NAME):	$(OBJ)
-	ar rc $(NAME) $(OBJ)
-	make clean
+		ar rc $(NAME) $(OBJ)
+		make clean
 
 full:		$(FULLOB)
-	ar rc $(NAME) $(OBJ)
-	rm -f $(FULLOB)
+		ar rc $(NAME) $(OBJ)
+		rm -f $(FULLOB)
 
 clean:
-	rm -f $(OBJ) $(FULLOBJ)
+		rm -f $(OBJ) $(FULLOBJ)
 
-fclean:	clean
-	rm -f $(NAME)
+fclean:		clean
+		rm -f $(NAME)
 
-re:	fclean all
+re:		fclean all
