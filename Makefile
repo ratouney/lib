@@ -5,7 +5,7 @@
 ## Login   <ratouney@epitech.net>
 ##
 ## Started on  Fri Oct 14 09:36:54 2016 ratouney ratouney
-## Last update Wed Apr 12 13:23:03 2017 Arthur Knoepflin
+## Last update Thu Apr 27 15:35:59 2017 
 ##
 
 SRC	=	string/my_putchar.c		\
@@ -43,7 +43,10 @@ SRC	=	string/my_putchar.c		\
 		file/loadfile_utils.c		\
 		array/show_tab.c		\
 		array/free_tab.c		\
-		array/nb_args.c
+		array/nb_args.c			\
+		malloc/my_malloc.c		\
+		malloc/my_malloc_tag.c		\
+		malloc/my_malloc_utils.c
 
 FULL	=	$(SRC)				\
 		string/fuse_arg.c
@@ -62,7 +65,6 @@ all:		$(NAME)
 
 $(NAME):	$(OBJ)
 		ar rc $(NAME) $(OBJ)
-		make clean
 
 full:		$(FULLOB)
 		ar rc $(NAME) $(OBJ)
