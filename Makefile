@@ -5,7 +5,7 @@
 ## Login   <ratouney@epitech.net>
 ##
 ## Started on  Fri Oct 14 09:36:54 2016 ratouney ratouney
-## Last update Thu Apr 27 15:35:59 2017 
+## Last update Tue May  2 10:57:20 2017 
 ##
 
 SRC	=	string/my_putchar.c		\
@@ -68,7 +68,6 @@ $(NAME):	$(OBJ)
 
 full:		$(FULLOB)
 		ar rc $(NAME) $(OBJ)
-		rm -f $(FULLOB)
 
 clean:
 		rm -f $(OBJ) $(FULLOBJ)
