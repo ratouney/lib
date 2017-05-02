@@ -32,8 +32,6 @@ char	*my_strndup(char *, int);
 void	my_putnbr(int nbr);
 void	my_putnbr_fd(int fd, int nbr);
 
-void	my_memset_i(int *, int, int);
-
 int	my_strcmp(char *s1, char *s2);
 int	my_strncmp(char *s1, char *s2, int size);
 

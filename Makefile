@@ -5,7 +5,7 @@
 ## Login   <ratouney@epitech.net>
 ##
 ## Started on  Fri Oct 14 09:36:54 2016 ratouney ratouney
-## Last update Fri Apr 28 18:42:39 2017 Arthur Knoepflin
+## Last update Tue May  2 11:02:36 2017 
 ##
 
 SRC	=	string/my_putchar.c		\
@@ -18,7 +18,6 @@ SRC	=	string/my_putchar.c		\
 		string/my_strlen.c		\
 		string/my_epurstrlen.c		\
 		string/my_getnbr.c		\
-		string/my_memset.c		\
 		string/fdinstr.c		\
 		string/fuse.c 			\
 		string/stcl.c			\
