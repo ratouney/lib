@@ -5,7 +5,7 @@
 ## Login   <ratouney@epitech.net>
 ##
 ## Started on  Fri Oct 14 09:36:54 2016 ratouney ratouney
-## Last update Tue May  2 11:15:32 2017 
+## Last update Tue May  2 11:16:42 2017 
 ##
 
 SRC	=	string/my_putchar.c		\
@@ -14,7 +14,6 @@ SRC	=	string/my_putchar.c		\
 		string/my_strcmp.c		\
 		string/my_strncmp.c		\
 		string/my_strlen.c		\
-		string/my_epurstrlen.c		\
 		string/my_getnbr.c		\
 		string/fdinstr.c		\
 		string/fuse.c 			\
@@ -62,11 +61,9 @@ all:		$(NAME)
 
 $(NAME):	$(OBJ)
 		ar rc $(NAME) $(OBJ)
-		make clean
 
 full:		$(FULLOB)
 		ar rc $(NAME) $(OBJ)
-		rm -f $(FULLOB)
 
 clean:
 		rm -f $(OBJ) $(FULLOBJ)
