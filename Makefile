@@ -5,15 +5,13 @@
 ## Login   <ratouney@epitech.net>
 ##
 ## Started on  Fri Oct 14 09:36:54 2016 ratouney ratouney
-## Last update Tue May  2 11:02:36 2017 
+## Last update Tue May  2 11:15:32 2017 
 ##
 
 SRC	=	string/my_putchar.c		\
 		string/my_putstr.c		\
 		string/my_putnbr.c		\
 		string/my_strcmp.c		\
-		string/my_strdup.c		\
-		string/my_strndup.c		\
 		string/my_strncmp.c		\
 		string/my_strlen.c		\
 		string/my_epurstrlen.c		\
