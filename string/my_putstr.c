@@ -16,12 +16,9 @@ int	my_putstr(char *str)
   int	count;
 
   count = 0;
-  if (str == NULL || str[0] == '\0')
-    return (0);
   while (str[count] != '\0')
     {
-      if (my_putchar(str[count]) == -1)
-	return (-1);
+      my_putchar(str[count]);
       count++;
     }
   return (count);

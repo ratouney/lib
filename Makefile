@@ -5,17 +5,20 @@
 ## Login   <ratouney@epitech.net>
 ##
 ## Started on  Fri Oct 14 09:36:54 2016 ratouney ratouney
-## Last update Tue May  2 10:57:20 2017 
+## Last update Fri Apr 28 18:42:39 2017 Arthur Knoepflin
 ##
 
 SRC	=	string/my_putchar.c		\
 		string/my_putstr.c		\
 		string/my_putnbr.c		\
 		string/my_strcmp.c		\
+		string/my_strdup.c		\
+		string/my_strndup.c		\
 		string/my_strncmp.c		\
 		string/my_strlen.c		\
 		string/my_epurstrlen.c		\
 		string/my_getnbr.c		\
+		string/my_memset.c		\
 		string/fdinstr.c		\
 		string/fuse.c 			\
 		string/stcl.c			\
@@ -43,10 +46,7 @@ SRC	=	string/my_putchar.c		\
 		file/loadfile_utils.c		\
 		array/show_tab.c		\
 		array/free_tab.c		\
-		array/nb_args.c			\
-		malloc/my_malloc.c		\
-		malloc/my_malloc_tag.c		\
-		malloc/my_malloc_utils.c
+		array/nb_args.c
 
 FULL	=	$(SRC)				\
 		string/fuse_arg.c
@@ -65,9 +65,11 @@ all:		$(NAME)
 
 $(NAME):	$(OBJ)
 		ar rc $(NAME) $(OBJ)
+		make clean
 
 full:		$(FULLOB)
 		ar rc $(NAME) $(OBJ)
+		rm -f $(FULLOB)
 
 clean:
 		rm -f $(OBJ) $(FULLOBJ)

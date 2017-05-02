@@ -12,26 +12,14 @@
 
 int	my_strcmp(char *s1, char *s2)
 {
-  int	count;
+  int	i;
 
-  if (s1 == NULL)
-    return (-1);
-  if (s2 == NULL)
-    return (-2);
-  if (s1 == NULL && s2 == NULL)
-    return (-3);
-  count = 0;
-  while (s1[count] != '\0' && s2[count] != '\0')
+  i = 0;
+  while (s1[i] && s2[i])
     {
-      if (s1[count] == '\0' && s2[count] != '\0')
-	return (2);
-      else if (s1[count] != '\0' && s2[count] == '\0')
-	return (1);
-      else if (s1[count] > s2[count])
-	return (1);
-      else if (s1[count] < s2[count])
-	return (2);
-      count++;
+      if (s1[i] != s2[i])
+	return (s1[i] - s2[i]);
+      i += 1;
     }
-  return (0);
+  return (s1[i] - s2[i]);
 }

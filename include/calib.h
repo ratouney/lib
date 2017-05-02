@@ -16,9 +16,6 @@
 # define LA_BN 10
 # define LA_BF 11
 
-# define LA_WRT(x, y, z, a) calib_write(x, y, z, a)
-# define LA_REM(x, y, z, a) y = calib_rem(x, z, a)
-# define LA_ADD(x, y, z, a, b) y = calib_add(x, z, a, b)
 # define LA_CPY(x, y) y = calib_copy(x)
 # define LA_FRE(x) destroy_charray(x)
 # define LA_SHW(x) calib_show(x)

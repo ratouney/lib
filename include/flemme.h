@@ -21,6 +21,5 @@
 # include "get_next_line.h"
 # include "loadfile.h"
 # include "ratlib.h"
-# include "malloc.h"
 
 #endif /* !FLEMME_H_ */
