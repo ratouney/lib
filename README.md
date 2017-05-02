@@ -3,10 +3,12 @@
 Use the makefile to compile the whole lib. Experimental functions are only included if compiled with "make full"
 This library contains :
 
-     Libarray	  => Managing **char easily without trouble
-     FileLoad 	  => Don't think about loadingn file, this does it for you
+     Array	  => Basic array functions (show, str_to_wordtab, ...)
+     FileLoad 	  => Loading files in memory
      GetNextLine  => Reads an fd, line by line
-     Strings	  => Various functions for string managment
+     Libarray	  => Managing **char through a object styled structure
+     Malloc	  => Upgrade to malloc with tag classification
      Misc	  => Random more or less usefull functions
+     Strings	  => Various functions for string managment
 
 
