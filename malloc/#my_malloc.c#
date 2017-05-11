@@ -5,7 +5,7 @@
 ** Login   <ratouney >
 ** 
 ** Started on  Wed Apr 26 20:54:18 2017 Jean Pignouf
-** Last update Wed May 10 21:44:11 2017 
+** Last update Wed May 10 21:26:13 2017 
 */
 
 #include <stdlib.h>
@@ -77,39 +77,34 @@ void my_free_link(t_tag **tag_list, void *space)
   t_mal *prev;
 
   malist = (*tag_list)->mal_list;
-  prev = malist;
-  if (prev->space == space)
-  {
-    (*tag_list)->mal_list = (*tag_list)->mal_list->next;
-    free(prev->space);
-    free(prev->tag);
-    free(prev);
-    return;
-  }
-  while (malist)
-  {
-    if (malist->space == space)
+  if ((*tag_list)->mal_list->space == space)
     {
-      if (malist->next == NULL)
-      {
-        free(prev->next->tag);
-        free(prev->next->space);
-        free(prev->next);
-        prev->next = NULL;
-        return;
-      }
+      printf("Head of list\n");
+      (*tag_list)->mal_list = malist->next;
+      free(prev->space);
+      free(prev->tag);
+      free(prev);
+    }
+  prev = malist;
+  while (malist)
+    {
+      
+if (malist->next == NULL)
+	{
+	  printf("End of list, nothing to do\n");
+	  printf("-> Previous : %p\n-> Previous->next : %p\n-> Current : %p\n", prev, prev->next, malist);
+	  free(prev->next->tag);
+	  free(prev->next->space);
+	  free(prev->next);
+	  prev->next = NULL;
+	  return ;
+	}
       else
-      {
-        prev->next = malist->next;
-        free(malist->space);
-        free(malist->tag);
-        free(malist);
-        return;
-      }
+        printf("Inside the list, separate and re-fuse\n");
+	}
       prev = malist;
       malist = malist->next;
     }
-  }
 }
 
 void my_free(void *space)

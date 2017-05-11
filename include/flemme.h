@@ -17,9 +17,11 @@
 # include <stdio.h>
 # include <sys/types.h>
 # include <sys/stat.h>
+# include <time.h>
 # include "calib.h"
 # include "get_next_line.h"
 # include "loadfile.h"
 # include "ratlib.h"
+# include "malloc.h"
 
 #endif /* !FLEMME_H_ */

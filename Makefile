@@ -5,7 +5,7 @@
 ## Login   <ratouney@epitech.net>
 ##
 ## Started on  Fri Oct 14 09:36:54 2016 ratouney ratouney
-## Last update Tue May  2 11:16:42 2017 
+## Last update Thu May 11 16:47:28 2017 
 ##
 
 SRC	=	string/my_putchar.c		\
@@ -42,7 +42,11 @@ SRC	=	string/my_putchar.c		\
 		file/loadfile_utils.c		\
 		array/show_tab.c		\
 		array/free_tab.c		\
-		array/nb_args.c
+		array/nb_args.c			\
+		malloc/my_malloc.c		\
+		malloc/my_free.c		\
+		malloc/my_malloc_utils.c	\
+		malloc/my_malloc_tag.c
 
 FULL	=	$(SRC)				\
 		string/fuse_arg.c
