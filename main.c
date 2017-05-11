@@ -22,5 +22,6 @@ int	main(int argc, char **argv)
   my_free(ding[0]);
   my_free(ding[1]);
   my_free(ding);
+  MY_CLEAR();
   return (0);
 }
