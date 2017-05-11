@@ -10,7 +10,6 @@
 
 #include <stdlib.h>
 #include <unistd.h>
-#include "malloc.h"
 #include "loadfile.h"
 #include "ratlib.h"
 
@@ -82,7 +81,7 @@ char	**loadfile_export(t_content data)
 
   count = -1;
   while (data.line[++count]);
-  if ((new = my_malloc("loadfile", sizeof(char *) * (count + 1))) == NULL)
+  if ((new = malloc(sizeof(char *) * (count + 1))) == NULL)
     return (NULL);
   new[count] = NULL;
   count = -1;
