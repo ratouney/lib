@@ -5,7 +5,7 @@
 ## Login   <ratouney@epitech.net>
 ##
 ## Started on  Fri Oct 14 09:36:54 2016 ratouney ratouney
-## Last update Thu May 11 16:47:28 2017 
+## Last update Thu May 11 17:20:08 2017 
 ##
 
 SRC	=	string/my_putchar.c		\
@@ -35,6 +35,7 @@ SRC	=	string/my_putchar.c		\
 		libarray/my_strpaste.c		\
 		libarray/newcharray.c		\
 		gnl/get_next_line.c		\
+		gnl/my_gnl.c			\
 		misc/char_is.c			\
 		misc/power_it.c			\
 		misc/str_is.c			\

@@ -5,7 +5,7 @@
 ** Login   <ratouney >
 ** 
 ** Started on  Wed Apr 26 20:54:18 2017 Jean Pignouf
-** Last update Wed May 10 21:44:11 2017 
+** Last update Thu May 11 17:12:21 2017 
 */
 
 #include <stdlib.h>
@@ -13,25 +13,25 @@
 #include "ratlib.h"
 #include "malloc.h"
 
-int my_malloc_st(t_tag *tag_list, char *tag)
+int		my_malloc_st(t_tag *tag_list, char *tag)
 {
-  t_tag *temp;
+  t_tag		*temp;
 
   if (tag_list == NULL)
     return (-1);
   temp = tag_list;
   while (temp)
-  {
-    if (my_strcmp(temp->name, tag) == 0)
-      return (1);
-    temp = temp->next;
-  }
+    {
+      if (my_strcmp(temp->name, tag) == 0)
+	return (1);
+      temp = temp->next;
+    }
   return (0);
 }
 
-static void *my_malloc_get(t_mal *mal_list)
+static void	*my_malloc_get(t_mal *mal_list)
 {
-  t_mal *mal;
+  t_mal		*mal;
 
   mal = mal_list;
   while (mal->next)
@@ -39,10 +39,10 @@ static void *my_malloc_get(t_mal *mal_list)
   return (mal->space);
 }
 
-static void *my_malloc_mainloop(t_tag **given, char *tag)
+static void	*my_malloc_mainloop(t_tag **given, char *tag)
 {
-  t_tag *tag_list;
-  t_tag *temp;
+  t_tag		*tag_list;
+  t_tag		*temp;
 
   tag_list = (*given);
   temp = tag_list;
@@ -51,9 +51,9 @@ static void *my_malloc_mainloop(t_tag **given, char *tag)
   return (my_malloc_get(temp->mal_list));
 }
 
-static void *my_malloc_preloop(t_tag **tag_list, char *tag, int size)
+static void	*my_malloc_preloop(t_tag **tag_list, char *tag, int size)
 {
-  t_tag *temp;
+  t_tag		*temp;
 
   temp = (*tag_list);
   while (my_strcmp(temp->name, tag) != 0)
@@ -65,20 +65,20 @@ static void *my_malloc_preloop(t_tag **tag_list, char *tag, int size)
   return (my_malloc_mainloop(tag_list, tag));
 }
 
-void *my_malloc(char *tag, int size)
+void		*my_malloc(char *tag, int size)
 {
-  static t_tag *tag_list = NULL;
+  static t_tag	*tag_list = NULL;
   int rt;
 
   if (size > 0)
-  {
-    rt = my_malloc_st(tag_list, tag);
-    if (rt == -1)
-      tag_list = my_malloc_tag_list_init(tag);
-    else if (rt == 0)
-      add_tag(tag_list, tag);
-    return (my_malloc_preloop(&tag_list, tag, size));
-  }
+    {
+      rt = my_malloc_st(tag_list, tag);
+      if (rt == -1)
+	tag_list = my_malloc_tag_list_init(tag);
+      else if (rt == 0)
+	add_tag(tag_list, tag);
+      return (my_malloc_preloop(&tag_list, tag, size));
+    }
   if (size == -1)
     return (my_malloc_free(tag_list, tag));
   if (size == -2)

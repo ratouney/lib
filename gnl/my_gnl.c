@@ -1,15 +1,16 @@
 /*
-** main.c for GetNextLine in /home/ratouney/gnl
-**
-** Made by Ratouney
-** Login   <maxime.de-la-fouchardiere@epitech.eu>
-**
-** Started on  Tue Mar 28 13:46:20 2017
-** Last update	Wed Apr 05 10:49:25 2017 Full Name
+** my_gnl.c for GNL in /home/ratouney/lib
+** 
+** Made by 
+** Login   <ratouney >
+** 
+** Started on  Thu May 11 17:16:54 2017 Jean Pignouf
+** Last update Thu May 11 17:20:50 2017 
 */
 
 #include <unistd.h>
 #include <stdlib.h>
+#include "malloc.h"
 #include "get_next_line.h"
 
 /*
@@ -32,7 +33,7 @@ static char	*gnl_fuse(char *str, char *str1, int mode)
   int	cunt;
   char	*n;
 
-  if ((n = malloc(sizeof(char) *
+  if ((n = my_malloc("gnl", sizeof(char) *
 		  (gnl_stl(str) + gnl_stl(str1) + 1))) == NULL)
     return (NULL);
   count = -1;
@@ -84,7 +85,7 @@ static char	*gnl_stcl(char *str, int from, int to, int mode)
     max = gnl_stl(str);
   else
     max = (to <= gnl_stl(str) ? to : gnl_stl(str));
-  if ((n = malloc(sizeof(char) * (max - min + 2))) == NULL)
+  if ((n = my_malloc("gnl", sizeof(char) * (max - min + 2))) == NULL)
     return (NULL);
   count = -1;
   while (++count + min < max)
@@ -95,7 +96,7 @@ static char	*gnl_stcl(char *str, int from, int to, int mode)
   return (n);
 }
 
-char		*get_next_line(int fd)
+char		*my_gnl(int fd)
 {
   static char	*save = NULL;
   static int	i[2];

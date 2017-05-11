@@ -5,11 +5,11 @@
 ** Login   <ratouney >
 ** 
 ** Started on  Wed Apr 26 20:54:57 2017 Jean Pignouf
-** Last update Sat May  6 18:20:48 2017 
+** Last update Thu May 11 17:09:54 2017 
 */
 
-#ifndef RATLIB_MALLOC_H
-# define RATLIB_MALLOC_H
+#ifndef RATLIB_MALLOC_H_
+# define RATLIB_MALLOC_H_
 
 # define MY_CLEAR() my_malloc(NULL, -2)
 # define MY_FREETAG(x) my_malloc(x, -1)
@@ -19,7 +19,7 @@ typedef struct	s_mal
   void		*space;
   int		size;
   char		*tag;
-  
+
   struct s_mal	*next;
 }		t_mal;
 
@@ -32,7 +32,7 @@ typedef struct	s_tag
 }		t_tag;
 
 void		*my_malloc(char *tag, int size);
-void     my_free(void *space);
+void		my_free(void *space);
 
 void		*my_malloc_free(t_tag *tag_list, char *tag);
 void		*my_malloc_freelist(t_tag *tag_list);
@@ -46,4 +46,4 @@ void		add_tag(t_tag *tag_list, char *str);
 void		add_to_malloc_list(t_mal *mal_list, int size, char *tag);
 int		my_malloc_st(t_tag *tag_list, char *tag);
 
-#endif /* !RATLIB_MALLOC_H */
+#endif /* !RATLIB_MALLOC_H_ */

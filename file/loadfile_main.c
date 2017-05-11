@@ -11,6 +11,7 @@
 #include <stdlib.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include "malloc.h"
 #include "ratlib.h"
 #include "loadfile.h"
 
@@ -59,7 +60,7 @@ t_content	loadfile_line_prep(t_content info)
       info.errno = 3;
       return (info);
     }
-  if ((data = malloc(sizeof(char *) * (seps + 2))) == NULL)
+  if ((data = my_malloc("loadfile", sizeof(char *) * (seps + 2))) == NULL)
     {
       info.errno = 4;
       return (info);

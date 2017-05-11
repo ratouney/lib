@@ -5,10 +5,11 @@
 ** Login   <arthur@epitech.net>
 ** 
 ** Started on  Mon Apr 10 21:46:45 2017 Arthur Knoepflin
-** Last update Mon Apr 10 22:32:21 2017 Arthur Knoepflin
+** Last update Thu May 11 17:23:21 2017 
 */
 
 #include <stdlib.h>
+#include "malloc.h"
 #include "ratlib.h"
 
 char	*fuse(char *str, char *str1, int mode)
@@ -17,7 +18,7 @@ char	*fuse(char *str, char *str1, int mode)
   int	cunt;
   char	*new;
 
-  if ((new = malloc(sizeof(char) *
+  if ((new = my_malloc("fuse",sizeof(char) *
 		    (my_strlen(str) + my_strlen(str1) + 1))) == NULL)
     return (NULL);
   count = -1;
