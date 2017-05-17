@@ -76,6 +76,8 @@ t_content	loadfile_line(t_content info)
   int		cunt;
 
   info = loadfile_line_prep(info);
+  if (info.errno != 0)
+    return (info);
   count = 0;
   cunt = 0;
   while (info.raw[count])

@@ -5,7 +5,7 @@
 ## Login   <ratouney@epitech.net>
 ##
 ## Started on  Fri Oct 14 09:36:54 2016 ratouney ratouney
-## Last update Thu May 11 17:20:08 2017 
+## Last update Wed May 17 13:23:11 2017 
 ##
 
 SRC	=	string/my_putchar.c		\
@@ -18,6 +18,7 @@ SRC	=	string/my_putchar.c		\
 		string/fdinstr.c		\
 		string/fuse.c 			\
 		string/stcl.c			\
+		string/my_getfloat.c		\
 		libarray/calib_add.c		\
 		libarray/calib_char.c		\
 		libarray/calib_copy.c		\

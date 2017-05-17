@@ -59,5 +59,6 @@ void	show_tab(char **tab, int fd);
 void	show_array(int *tab, int size, int fd);
 void	free_tab(char **tab);
 int	nb_args(char **);
+float	my_getfloat(char *str);
 
 #endif /* !RATLIB_H_ */
