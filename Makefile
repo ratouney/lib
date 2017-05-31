@@ -5,7 +5,7 @@
 ## Login   <ratouney@epitech.net>
 ##
 ## Started on  Fri Oct 14 09:36:54 2016 ratouney ratouney
-## Last update Wed May 17 13:23:11 2017 
+## Last update Wed May 31 17:04:56 2017 Jean Pignouf
 ##
 
 SRC	=	string/my_putchar.c		\
@@ -57,6 +57,22 @@ OBJ	=	$(SRC:.c=.o)
 
 FULLOB	=	$(FULL:.c=.o)
 
+PARSE	=	array/stwt.c			\
+		file/loadfile_main.c		\
+		file/loadfile_utils.c		\
+		libarray/my_strpaste.c		\
+		string/fdinstr.c		\
+		string/fuse.c			\
+		string/my_getnbr.c		\
+		string/my_putchar.c		\
+		string/my_putnbr.c		\
+		string/my_putstr.c		\
+		string/my_strcmp.c		\
+		string/my_strlen.c		\
+		string/stcl.c
+
+PARSEOB	=	$(PARSE:.c=.o)
+
 NAME	=	librat.a
 
 INCLUDE	= 	-I./include
@@ -69,7 +85,10 @@ $(NAME):	$(OBJ)
 		ar rc $(NAME) $(OBJ)
 
 full:		$(FULLOB)
-		ar rc $(NAME) $(OBJ)
+		ar rc $(NAME) $(FULLOB)
+
+parse:		$(PARSEOB)
+		ar rc $(NAME) $(PARSEOB)
 
 clean:
 		rm -f $(OBJ) $(FULLOBJ)
